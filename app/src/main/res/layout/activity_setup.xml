@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    >
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".signup_in_setup.SetupActivity">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/setup_profile_image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:src="@drawable/profiledp" />
+
+    <EditText
+        android:id="@+id/setup_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/setup_profile_image"
+        android:background="@drawable/inputs"
+        android:ems="10"
+        android:hint="username"
+        android:inputType="text"
+        android:padding="14dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="5dp"
+        android:freezesText="true"
+        />
+    <!-- android:drawableLeft="@drawable/username" -->
+
+
+    <EditText
+        android:id="@+id/setup_full_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/setup_username"
+        android:background="@drawable/inputs"
+        android:ems="10"
+        android:hint="Full Name"
+        android:inputType="text"
+        android:padding="14dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="5dp"
+        android:freezesText="true"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/GenderLabel"
+        android:text="Gender:"
+        android:padding="14dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="5dp"
+        android:textSize="18sp"
+        android:background="@drawable/inputs"
+        android:layout_below="@id/setup_full_name"/>
+    <Spinner
+        android:id="@+id/Genderspinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/setup_full_name"
+        android:layout_toRightOf="@id/GenderLabel"
+        android:paddingLeft="8dp"
+        android:paddingRight="8dp"
+        android:background="@drawable/inputs"
+        android:padding="14dp"
+        android:textSize="18sp"
+
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="5dp"/>
+
+
+    <!--             android:drawableRight="@drawable/female" -->
+
+    <EditText
+        android:id="@+id/setup_phone_number"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_below="@+id/Genderspinner"
+        android:background="@drawable/inputs"
+        android:ems="10"
+        android:freezesText="true"
+        android:hint="Phone Number eg(0751234567)"
+        android:padding="14dp"
+        android:layout_marginLeft="7dp"
+        android:layout_marginRight="7dp"
+        android:layout_marginTop="5dp"
+        android:inputType="phone"
+        />
+
+
+    <TextView
+        android:id="@+id/setup_tvDateOB"
+        android:layout_width="284dp"
+        android:layout_height="68dp"
+        android:layout_below="@id/setup_phone_number"
+        android:layout_marginLeft="7dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="7dp"
+        android:background="@drawable/inputs"
+        android:hint="Date of birth"
+        android:padding="14dp"
+        android:textSize="20sp"
+        android:freezesText="true"
+        />
+
+
+
+
+    <Button
+        android:id="@+id/setup_information_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/setup_tvDateOB"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/button"
+        android:padding="14dp"
+        android:text="SAVE"
+        android:textColor="@android:color/background_light"
+        android:textSize="20sp"
+        tools:text="Save" />
+
+
+
+</RelativeLayout>
+</ScrollView>

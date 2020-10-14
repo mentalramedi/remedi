@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="Home" android:id="@+id/nav_home" />
+
+    <item android:title="Profile"  android:id="@+id/nav_profile" />
+
+    <item android:title="Devices"  android:id="@+id/nav_devices" />
+
+    <item android:title="Members"  android:id="@+id/nav_members" />
+
+    <item android:title="Progress"  android:id="@+id/nav_progress" />
+
+    <item android:title="Tests"  android:id="@+id/nav_tests"/>
+
+    <item android:title="Logout"  android:id="@+id/nav_logout"/>
+</menu>

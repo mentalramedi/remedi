@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Devices.DevicesActivity">
+    <RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_height="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+
+        >
+        <include
+            android:id="@+id/devices_toolbar"
+            layout="@layout/app_bar_layout"></include>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/devices_toolbar"
+            android:id="@+id/horizontal_line"
+            android:background="#000"/>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/CV1"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_below="@id/horizontal_line"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            android:outlineAmbientShadowColor="@color/indigo"
+            android:outlineProvider="paddedBounds"
+            app:cardElevation="5dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/eeg_device_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="EEG Device"
+                    android:textAllCaps="false"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:background="@color/indigo"
+                    android:textColor="#ffffff"
+                    />
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/eeg_image"
+                    android:src="@drawable/logo"
+                    android:layout_below="@id/eeg_device_header"
+                    />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/eeg_device_name_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device Name : "
+                    android:layout_toRightOf="@id/eeg_image"
+                    android:layout_below="@id/eeg_device_header"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textColor="@color/indigo"
+                    />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/eeg_device_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emotiv Headband"
+                    android:layout_toRightOf="@id/eeg_device_name_label"
+                    android:layout_below="@id/eeg_device_header"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textColor="@color/indigo"
+                    />
+                <TextView
+                    android:layout_marginTop="3dp"
+                    android:id="@+id/eeg_device_status_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device Status : "
+                    android:layout_toRightOf="@id/eeg_image"
+                    android:layout_below="@id/eeg_device_name_label"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textColor="@color/indigo"
+                    />
+                <TextView
+                    android:id="@+id/eeg_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Disconnected"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@id/eeg_device_name_label"
+                    android:layout_below="@id/eeg_device_name"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textColor="@color/darkRed"
+                    />
+
+            </RelativeLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/CV2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/CV1"
+            android:layout_margin="10dp"
+            app:cardCornerRadius="@dimen/cardview_default_radius"
+            android:outlineAmbientShadowColor="@color/indigo"
+            android:outlineProvider="paddedBounds"
+            app:cardElevation="5dp"
+            android:layout_marginBottom="30dp"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/ecg_device_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ECG Device"
+                    android:textAllCaps="false"
+                    android:textSize="25sp"
+                    android:gravity="center"
+                    android:background="@color/indigo"
+                    android:textColor="#ffffff"
+                    />
+                <ImageView
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:id="@+id/ecg_image"
+                    android:src="@drawable/logo"
+                    android:layout_below="@id/ecg_device_header"
+                    />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/ecg_device_name_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device Name : "
+                    android:layout_toRightOf="@id/ecg_image"
+                    android:layout_below="@id/ecg_device_header"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textColor="@color/indigo"
+                    />
+                <TextView
+                    android:layout_marginTop="10dp"
+                    android:id="@+id/ecg_device_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Emotiv Headband"
+                    android:layout_toRightOf="@id/ecg_device_name_label"
+                    android:layout_below="@id/ecg_device_header"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textColor="@color/indigo"
+                    />
+                <TextView
+                    android:layout_marginTop="3dp"
+                    android:id="@+id/ecg_device_status_label"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Device Status : "
+                    android:layout_toRightOf="@id/ecg_image"
+                    android:layout_below="@id/ecg_device_name_label"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textColor="@color/indigo"
+                    />
+                <TextView
+                    android:id="@+id/ecg_status"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Disconnected"
+                    android:layout_marginTop="3dp"
+                    android:layout_toRightOf="@id/ecg_device_name_label"
+                    android:layout_below="@id/ecg_device_name"
+                    android:textAllCaps="false"
+                    android:textSize="15sp"
+                    android:textColor="@color/darkRed"
+                    />
+
+            </RelativeLayout>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/addDeviceBtn"
+            android:background="@drawable/button"
+             android:text="Add Device"
+            android:layout_alignParentBottom="true"
+            android:textAllCaps="false"
+            android:layout_margin="5dp"
+            android:layout_marginBottom="5dp"
+            android:textColor="#ffffff"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navigation_view"
+        android:layout_gravity="start"
+        android:layout_marginBottom="3dp"
+        app:menu="@menu/navigation_menu"
+        />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

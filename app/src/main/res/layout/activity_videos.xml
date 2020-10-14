@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".testCategories.VideosActivity">
+    <include
+        android:id="@+id/videos_toolbar"
+        layout="@layout/app_bar_layout"></include>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/videos_toolbar"
+        android:id="@+id/horizontal_line"
+        android:background="#000"/>
+
+    <VideoView
+        android:layout_below="@id/horizontal_line"
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+
+        />
+    <LinearLayout
+        android:layout_below="@id/videoView"
+        android:orientation="horizontal"
+        android:id="@+id/videoControls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/indigo">
+        <ImageButton
+            android:id="@+id/playBtn"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/eegicon"
+            />
+        <TextView
+            android:id="@+id/videoTimerTV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1:00"
+            android:textSize="20sp"
+            android:layout_gravity="center"
+
+            />
+
+        <ProgressBar
+            android:id="@+id/videoprogressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@color/white"
+          />
+
+
+    </LinearLayout>
+
+
+
+</RelativeLayout>

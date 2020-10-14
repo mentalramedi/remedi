@@ -1,0 +1,95 @@
+<RelativeLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    >
+    <include
+        android:id="@+id/addDevice_toolbar"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:layout_centerHorizontal="true"
+        layout="@layout/app_bar_layout"></include>
+
+
+
+    <View
+        android:id="@+id/horizontal_lineaddev"
+        android:layout_below="@id/addDevice_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#000000"/>
+
+    <!-- <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Turn On"
+         android:id="@+id/button"
+         android:background="@color/darkGreen"
+         android:textColor="#ffffff"
+         android:layout_below="@+id/horizontal_lineaddev"
+         android:clickable="true"
+         android:padding="10dp"
+         android:onClick="on" />
+
+     <Button
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Get visible"
+         android:onClick="visible"
+         android:id="@+id/button2"
+         android:textColor="#ffffff"
+
+         android:background="@drawable/button"
+         android:layout_alignBottom="@+id/button"
+         android:layout_toRightOf="@id/button4"
+          />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="List devices"
+        android:background="@drawable/button"
+        android:onClick="list"
+        android:textColor="#ffffff"
+
+        android:id="@+id/button3"
+        android:layout_below="@+id/button"
+         />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="turn off"
+        android:onClick="off"
+        android:id="@+id/button4"
+        android:background="@color/darkRed"
+        android:layout_below="@+id/horizontal_lineaddev"
+        android:layout_toRightOf="@id/button"
+         />
+-->
+    <ListView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/listView"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/tv3" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Paired devices:"
+        android:id="@+id/textView2"
+        android:textColor="#ff34ff06"
+        android:textSize="25dp"
+        android:layout_below="@+id/horizontal_lineaddev"
+        android:layout_alignLeft="@+id/listView"
+        android:layout_alignStart="@+id/listView" />
+    <TextView
+        android:id="@+id/tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/textView2"
+        android:textSize="20dp"
+        android:text="Pair devices in the bluetooth settings"/>
+</RelativeLayout>
